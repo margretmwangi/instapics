@@ -1,0 +1,25 @@
+{% extends 'insta/base.html'%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    {% if forms.errors %}
+    <p> Theres something wrong with what you entered</p>
+    {% endif%}
+    {% if next %}
+    <p>Hi you can't access that page</p>
+    {%endif%}
+
+    <form method="Post" action="{{% url 'login'%}}">
+        {% csrf_token %}
+        <p>Username{{form.username }}</p>
+        <p>Password{{ form.password }}
+        <input type="submit" value="login">
+        <input type="hidden" name="next" value="{{ next }}
+    </form>
+</body>
+</html>

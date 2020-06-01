@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> -->
+     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/insta.css' %}">
+    <title>IG</title>
+</head>
+<body>
+   <header>
+    <div class="navigation">
+        <div class="instalogo">
+            <a class="" href="/"><i class="fab fa-instagram"></i></a>
+            <a class="vl"href="/"></a>
+            <a  href="/">Instagram</a>
+        </div>
+       
+        <div class="search">
+            <input type="text" placeholder="search">
+            <a class="searchs" href="/"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="icons">
+            <a class="profile" href="/"><i class="far fa-user-circle"></i></a>
+            <a class="likes" href="/"><i class="far fa-heart"></i></a>
+            <a class="explore" href="/"><i class="far fa-compass"></i></a>
+   
+   
+        </div>
+    </div>     
+        
+   </header>
+   <div class="container">
+       {% block content%}
+       {%endblock%}
+   </div>
+</body>
+</html>
