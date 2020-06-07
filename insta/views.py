@@ -1,5 +1,10 @@
+from django.shortcuts import render,redirect,get_object_or_404
+from django.http  import HttpResponse,Http404,HttpResponseRedirect
 from django.shortcuts import render, redirect
-from .models import post
+from django.contrib.auth.decorators import login_required
+from .models import *
+from .forms import *
+from .models import post , Like
 from django.contrib import messages
 from.forms import UserRegisterForm
 from django.views.generic import(
@@ -32,7 +37,6 @@ def registration(request):
 def login(request):
 
     return render(request, 'registration/login.html') 
-    
 
-
-  
+def like_post(request):
+    return redirect('posts:post')
