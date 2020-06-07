@@ -7,6 +7,10 @@ from django.views.generic import(
 
 )
 # Create your views here.
+
+def index(request):
+    return render(request, 'insta/index.html')
+   
 class PostListView(ListView):
     template_name = "insta/post.html"
     queryset = post.objects.all()
@@ -19,9 +23,16 @@ def registration(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request,f'Account created for {username}')
-            return redirect('/')
+            return redirect('post/')
     else :
 
         form = UserRegisterForm()
     return render(request,'registration/register.html' , {'form':form})
 
+def login(request):
+
+    return render(request, 'registration/login.html') 
+    
+
+
+  

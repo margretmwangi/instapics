@@ -1,5 +1,8 @@
 body{
     background-color:whitesmoke;
+    justify-content: center;
+    
+   
 }
 header{
     background-color: white;
@@ -86,9 +89,9 @@ header{
     text-decoration: none;
     color:black;
 }
-.profile_image{
+.profile_image img{
     display: inline-block;
-    background-color: blueviolet;
+   
     height: 30px;
     width: 30px;
     padding: 0;
