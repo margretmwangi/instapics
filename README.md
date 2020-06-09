@@ -1,7 +1,7 @@
 
 
 ## Instapic
-This is an application  that represents
+This is an application  that replicas Instagram
 
 
 ### Required Features

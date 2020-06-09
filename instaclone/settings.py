@@ -26,7 +26,7 @@ SECRET_KEY = 'gph9l$1l&ju6^hl=-o&#gx!iv&l+1lac*$31k_5=b(m$uczbtu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mishinsta.herokuapp.com'  ]
+ALLOWED_HOSTS = ['mishinsta.herokuapp.com' , '127.0.0.1' ]
 
 
 # Application definition

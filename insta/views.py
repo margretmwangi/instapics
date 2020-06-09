@@ -9,6 +9,7 @@ from django.contrib import messages
 from.forms import UserRegisterForm
 from django.views.generic import(
     ListView,
+    CreateView
 
 )
 # Create your views here.
@@ -21,6 +22,15 @@ class PostListView(ListView):
     queryset = post.objects.all()
     context_object_name = 'posts'
 
+class PostCreateView(CreateView):
+    template_name = 'insta/create.html'
+    form_class = PostForm
+    queryset = post.objects.all()
+    success_url = 'post/'
+    def form_invalid(self,form):
+        print(form.cleaned_data)
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 def registration(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
